@@ -9,18 +9,23 @@ let n = 7
 
 // Add your code below:
 
-func fibanacci(n:Int) -> Int{
-    print("Calculating fibonacci(\(n))...")
-    var fib : Int
-    if n <= 2{
+func fibanacci(number:Int) -> Int{
+    print("Calculating fibonacci(\(number))...")
+    var fibonacci : Int
+    if number <= 2{
         print("Terminal case, returning 1.")
-        fib = 1
+        fibonacci = 1
     } else {
-        fib = fibanacci(n:n-1) + fibanacci(n:n-2)
-        print("Non-terminal case, returning \(fib).")
+        fibonacci = fibanacci(number:number-1) + fibanacci(number:number-2)
+        print("Non-terminal case, returning \(fibonacci).")
     }
-    return fib
+    return fibonacci
 }
 
-let x = fibanacci(n:n)
-print("The final result is: \(x).")
+
+func main(number:Int){
+    let finalN = fibanacci(number:number)
+    print("The final result is: \(finalN).")
+}
+
+main(number:n)

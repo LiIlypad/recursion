@@ -10,20 +10,23 @@ let n = 7
 // Add your code below:
 
 
-func factorial(n:Int) -> Int{
-    var fact : Int
-    print("Calculating factorial(\(n))...")
-    if n == 1{
+func factorial(number:Int) -> Int{
+    var factorial : Int
+    print("Calculating factorial(\(number))...")
+    if number == 1{
         print("Terminal case, returning 1.")
-        fact = 1
+        factorial = 1
     }else{
-        fact = n * factorial(n:n-1)
-        print("Non-terminal case, returning \(fact).")
+        factorial = number * factorial(number:number-1)
+        print("Non-terminal case, returning \(factorial).")
     }
-    return fact
+    return factorial
 }
 
-let x = factorial(n:n)
-print("The final result is: \(x).")
 
+func main(number:Int){
+    let finalN = factorial(number:number)
+    print("The final result is: \(finalN).")
+}
 
+main(number:n)
